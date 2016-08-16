@@ -55,6 +55,6 @@ public class EmailTest extends Fixture {
         mainPage.clickOnDocument();
         WebElement documentLocator = driver.findElement(By.xpath(".//div[@class='aLF-aPX-aPF-aPE-a1J-Jz-Jw']//p"));
 
-        Assert.assertTrue(documentLocator.getText().equals("This is the test message for sending the file.This is the test message for sending the file."));
+        Assert.assertTrue(documentLocator.getText().equals("This is the test message for sending the file."));
     }
 }

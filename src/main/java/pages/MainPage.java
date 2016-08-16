@@ -117,7 +117,10 @@ public class MainPage extends BasePage {
     }
 
     public void clickOnDocument() {
-        driver.findElement(By.xpath(".//div[@id=':ef']")).click();
+        Actions a = new Actions(driver);
+        WebElement document = driver.findElement(By.xpath(".//div[@class='aSH']//div[@class='aYy']"));
+        a.moveToElement(document);
+        a.doubleClick(document);
     }
 }
 
