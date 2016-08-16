@@ -57,7 +57,6 @@ public class MainPage extends BasePage {
             e.printStackTrace();
         }
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        ClassLoader loader = getClass().getClassLoader();
 
         File file = new File("C:\\LuxoftTest1\\src\\main\\resources\\files\\test.doc");
         StringSelection stringSelection = new StringSelection(file.getAbsolutePath());
@@ -115,36 +114,6 @@ public class MainPage extends BasePage {
         }
 
         return sCurrentLine;
-    }
-
-    public void clickOnDownloadButton() {
-        driver.findElement(By.xpath(".//div[@id=':11c']")).click();
-    }
-
-    public void downloadFile() throws InterruptedException {
-        Thread.sleep(1000L);
-        //create robot object
-        Robot robot = null;
-        try {
-            robot = new Robot();
-        } catch (AWTException e) {
-            e.printStackTrace();
-        }
-        Thread.sleep(1000L);
-        //Click Down Arrow Key to select "Save File" Radio Button
-        robot.keyPress(KeyEvent.VK_DOWN);
-        Thread.sleep(1000L);
-        // Click 3 times Tab to take focus on "OK" Button
-        robot.keyPress(KeyEvent.VK_TAB);
-        Thread.sleep(1000L);
-        robot.keyPress(KeyEvent.VK_TAB);
-        Thread.sleep(1000L);
-        robot.keyPress(KeyEvent.VK_TAB);
-        Thread.sleep(1000L);
-        //Click "Enter" Button to download file
-        robot.keyPress(KeyEvent.VK_ENTER);
-        Thread.sleep(5000L);
-        System.out.println("Robot work Complete");
     }
 
     public void clickOnDocument() {
